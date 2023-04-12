@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="../styles/review.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar">
+            <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+            <span type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAbElEQVRIS+2VyQ0AIQwDcWdbGqXRWRYh8eH4GczDFGArw0RBEj2IepOLr5E36oY6IjKTOYApb4m6Fge5eOp5q5g57S7LVnerPybuanUZ896SS7lOGtTM//U6dQK2WnsWbfUJAj6LJ6guM2Wof6+mKB893XD9AAAAAElFTkSuQmCC" />
+            </span>
+            <h1 class="navbar-title">Badminton</h1>
+            <nav class="navbar-menu">
+                <span class="nav-button"><a href="../index.html">Home</a> </span>
+                <span class="nav-button"><a href="./info.html">Information</a></span>
+                <span class="nav-button"><a href="./Reviews.html">Reviews</a></span>
+                <span class="nav-button"><a href="./About.html">About</a></span>
+
+
+            </nav>
+        </nav>
+    </header>
+
+
+    <div id="review-container" style="margin-top:100px;"></div>
+
+
+    <!-- Newsletter Signup section -->
+
+    <form>
+        <h3>Enter a review</h3>
+
+        <label for="name">Name:</label>
+        <input type="name" id="name" name="name" required><br>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" required max="5" min="0"><br>
+
+        <label for="review">Review:</label>
+        <input type="name" id="review" name="review" required><br>
+        <button type="button" id="submitbtn">Submit</button>
+
+
+    </form>
+    <footer class="footer-bottom">
+        Copyright &copy;2022. Designed by <span>Gurleen</span></p>
+
+    </footer>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="module" src="../js/review.js"></script>
+</body>
+
+</html>

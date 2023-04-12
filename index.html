@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+            <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+
+            <span type="button" class="navbar-burger" onclick="toggleMenuOpen()">
+
+                <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAbElEQVRIS+2VyQ0AIQwDcWdbGqXRWRYh8eH4GczDFGArw0RBEj2IepOLr5E36oY6IjKTOYApb4m6Fge5eOp5q5g57S7LVnerPybuanUZ896SS7lOGtTM//U6dQK2WnsWbfUJAj6LJ6guM2Wof6+mKB893XD9AAAAAElFTkSuQmCC" />
+            </span>
+            <h1 class="navbar-title">Badminton</h1>
+            <nav class="navbar-menu">
+                <span class="nav-button"><a href="/">Home</a> </span>
+                <span class="nav-button"><a href="/pages/info.html">Information</a></span>
+                <span class="nav-button"><a href="/pages/Reviews.html">Reviews</a></span>
+                <span class="nav-button"><a href="/pages/About.html">About</a></span>
+            </nav>
+        </nav>
+    </header>
+    <div class="container">
+
+        <h1>
+            Experience the Thrill of Badminton - A Fast-Paced Racket Sport That Demands Skill and Strategy
+            <!-- <span class="title-icon"></span> -->
+        </h1>
+        <div style="text-align:center;">
+            <figure>
+                <img src="./images/Badminton-3.jpg" width="80%" height="300px">
+                <figcaption>- Badminton racket and shuttlecock <cite> -- vecteezy.com</cite></figcaption>
+            </figure>
+        </div>
+
+        <p>
+
+            Badminton is a racket sport played by either two opposing players (singles) or two opposing pairs (doubles),
+            who
+            take positions on opposite halves of a rectangular court that is divided by a net. Players score points by
+            striking a shuttlecock with their racket so that it passes over the net and lands in their opponents' half
+            of
+            the court. A rally ends once the shuttlecock has struck the ground, and the shuttlecock may only be struck
+            once
+            by each side before it passes over the net.
+        </p>
+        <p>
+
+            The shuttlecock (or shuttle) is a feathered projectile whose unique aerodynamic properties cause it to fly
+            differently from the balls used in most racket sports; in particular, the feathers create much higher drag,
+            causing the shuttlecock to decelerate more rapidly than a ball. Shuttlecocks have a much higher top speed,
+            when
+            compared to other racket sports. As the shuttlecock flight is stubbornly affected by wind, competitive
+            badminton
+            is always played indoors. Badminton is also played outdoors as a casual recreational activity, often as a
+            garden
+            or beach game.
+        </p>
+        <p>
+            Since 1992, badminton has been an Olympic sport with five events: men's and women's singles, men's and
+            women's
+            doubles, and mixed doubles, in which each pair is a man and a woman. At high levels of play, the sport
+            demands
+            excellent fitness: players require aerobic stamina, agility, strength, speed, and precision. It is also a
+            technical sport, requiring good motor coordination and the development of sophisticated racket movements.
+        </p>
+
+        <div class="ytvideo">
+            <figure>
+                <iframe src="https://www.youtube.com/embed/WPM40QTO9DE" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen width="750" height="450"></iframe>
+            </figure>
+        </div>
+
+        <div class="ytvideomobile">
+            <figure>
+                <iframe src="https://www.youtube.com/embed/WPM40QTO9DE" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen width="300" height="150"></iframe>
+            </figure>
+        </div>
+
+
+        <!-- Newsletter Signup section -->
+
+        <form action="https://httpbin.org/post" method="post">
+            <h3>Sign up to <mark>The Badminton Birdie</mark> Newsletter</h3>
+            <input type="hidden" name="name" value="Gurleen Kaur Jhand">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <button type="submit">Subscribe</button>
+        </form>
+
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer-bottom">
+        Copyright &copy;2022. Designed by <span>Gurleen</span></p>
+
+    </footer>
+    <script type="text/javascript" src="../js/index.js"></script>
+
+</body>
+
+</html>

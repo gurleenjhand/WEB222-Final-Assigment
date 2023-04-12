@@ -1,0 +1,82 @@
+body{
+  background-color: #e8f2fb;
+  
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 500px;
+  width: 100%;
+  background-color: navy;
+  color: #e8f2fb;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+  color: #e8f2fb;
+}
+
+
+
+.date {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #e8f2fb;
+}
+
+.rating {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.rating:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+  background-size: contain;
+  margin-right: 5px;
+}
+
+.reviewText {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#review-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  grid-gap: -16px;
+
+  align-items: center;
+
+  margin-top: 100px;
+
+  margin: auto;
+
+  /* margin: auto 100px auto 100px; */
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #review-container {
+    grid-template-columns: 1fr;
+  }
+}

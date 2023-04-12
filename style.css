@@ -1,0 +1,546 @@
+body {
+    margin: auto;
+    /* padding: 30px; */
+    width: 80%;
+    align-content: center;
+    text-align: justify;
+    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.container {
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+
+.container:after {
+    content: "";
+    background-image: url("./images/watermark.jpg");
+
+    opacity: 0.3;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 10% 0;
+}
+
+/* CSS for navbar */
+/* nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: right;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #111;
+} */
+
+/* Set the title style */
+/* h1 {
+    font-size: 2em;
+    font-weight: bold;
+
+    text-align: center;
+
+} */
+
+p {
+    width: 95%;
+    text-align: justify;
+    margin: auto;
+}
+
+#aside-1 {
+    width: 80%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: left;
+    box-shadow: inset 8px 0 0 -5px #f16d1c;
+    font-style: italic;
+    color: #58e07c;
+    background-color: darkgreen;
+}
+
+mark {
+    background-color: aquamarine;
+}
+
+form {
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 20px;
+    background-color: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* new navbar */
+
+
+
+.nav-button {
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+
+
+
+}
+
+.nav-button>a {
+    color: white;
+}
+
+.nav-button>a:hover {
+    color: aqua;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background: #19191c;
+    color: #f9f9f9;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        justify-content: space-between;
+
+        padding: 12px;
+
+        height: 82px;
+    }
+}
+
+.navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+body.open .navbar-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-overlay {
+        display: none;
+    }
+}
+
+.navbar-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-burger {
+        display: none;
+    }
+}
+
+.navbar-title {
+    margin: 0;
+    font-size: 30px;
+}
+
+.navbar-menu {
+
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 270px;
+    height: 100%;
+    padding-top: 25px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #000000;
+    visibility: hidden;
+    transition: translate 0.3s;
+}
+
+.navbar-menu>span {
+    font-size: 20px;
+}
+
+body.open .navbar-menu {
+    translate: 0 0;
+    visibility: visible;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-menu {
+        position: static;
+        translate: 0 0;
+        width: auto;
+        background: transparent;
+        flex-direction: row;
+        visibility: visible;
+    }
+}
+
+.navbar-menu>span {
+    color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: 0 8px;
+}
+
+.navbar-menu>span.active {
+    color: inherit;
+}
+
+
+/* new container */
+/* Base styles for desktop screens */
+
+.container {
+    max-width: 1200px;
+    /* margin: 0 auto; */
+
+    padding: 50px auto 0px auto;
+}
+
+h1 {
+    font-size: 25px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0062cc;
+}
+
+/* footer {
+    margin-top: 50px;
+    text-align: center;
+} */
+
+/* Media query styles for smaller screens */
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 30px auto 0px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    img {
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* footer {
+        margin-top: 30px;
+    } */
+}
+
+.footer-bottom {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom span {
+    font-weight: bold;
+}
+
+
+
+
+.container:after {
+    content: "";
+    background-image: url("./images/watermark.jpg");
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10% 0;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top: 50px;
+    }
+
+    .container:after {
+        padding: 5% 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .container:after {
+        padding: 2% 0;
+    }
+}
+
+
+.ytvideo {
+    display: flex;
+
+    justify-content: center;
+
+    align-content: center;
+
+    align-items: center;
+}
+
+.ytvideomobile {
+    /* visibility: hidden; */
+    display: none;
+    /* display: flex; */
+
+    justify-content: center;
+
+    align-content: center;
+
+    align-items: center;
+}
+
+
+form {
+    max-width: 400px;
+    margin: 2em auto;
+    padding: 20px;
+    background-color: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: white;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+    form {
+        max-width: 90%;
+        margin: 1em auto;
+    }
+}
+
+
+/* for mobile */
+@media (max-width: 767px) {
+
+    figure>img {
+        width: 450px;
+        height: 100px;
+    }
+
+    .ytvideo {
+        display: none;
+
+    }
+
+    .ytvideomobile {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        /* position: static; */
+        text-align: center;
+
+    }
+
+    .footer-bottom span {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+.infocontainer {
+    margin-top: 100px;
+
+}
+
+h1, h2, h3, h4, h5, h6, a{
+    font-family: 'Ubuntu', sans-serif;
+}
